@@ -1,0 +1,141 @@
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+     rgba(126,213,111,0.8),
+     rgba(40,180,133,0.8)),
+      url(./img/viber_image_2021-07-30_07-40-04-169.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+}
+.header-logo{
+    height: 3.5rem;
+}
+.logo{
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+.text{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.heading-primary{
+    color: white;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+.heading-primary-main{
+    display: block;
+    font-weight: 100;
+    font-size: 6rem;
+    letter-spacing: 50px;
+    animation-name: move-in-left;
+    animation-duration: 3s;
+}
+
+@keyframes move-in-left{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80%{
+        transform: translateX(1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.heading-primary-sub{
+    display: block;
+    font-weight: 100;
+    font-size: 30px;
+    letter-spacing: 20px;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn, .btn:link, .btn:visited{
+    color: rgb(148, 148, 148);
+    background-color: white;
+    padding: 1.5rem 4rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:hover::after{
+    transform:scaleX(1.4) scaleY(1.6) ;
+    opacity: 0;
+}
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.btn-white{
+    background-color: white;
+    color: #777;
+}
+.btn-white::after{
+    background-color: white;
+}
+
+.btn::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+.btn-animated{
+    animation-name: move-in-bottom;
+    animation-duration: 0.5s;
+}
+
+@keyframes move-in-bottom{
+    0%{
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0) ;
+    }
+}
